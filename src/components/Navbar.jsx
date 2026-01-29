@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import styles from './Navbar.module.css'; // We will create this or use inline styles with our global variables
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

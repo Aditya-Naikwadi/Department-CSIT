@@ -1,24 +1,34 @@
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
 
-// Placeholder Pages
+// Pages
 import Home from './pages/Home';
-const Programs = () => <div className="p-8 text-center pt-24"><h1>Programs Page</h1></div>;
-const Events = () => <div className="p-8 text-center pt-24"><h1>Events Page</h1></div>;
-const Faculty = () => <div className="p-8 text-center pt-24"><h1>Faculty Page</h1></div>;
-const ELibrary = () => <div className="p-8 text-center pt-24"><h1>E-Library Page</h1></div>;
-const Alumni = () => <div className="p-8 text-center pt-24"><h1>Alumni Page</h1></div>;
-const Gallery = () => <div className="p-8 text-center pt-24"><h1>Gallery Page</h1></div>;
-const AboutUs = () => <div className="p-8 text-center pt-24"><h1>About Us Page</h1></div>;
-const ContactUs = () => <div className="p-8 text-center pt-24"><h1>Contact Us Page</h1></div>;
-const GetStarted = () => <div className="p-8 text-center pt-24"><h1>Get Started / Login</h1></div>;
+import Programs from './pages/Programs';
+import Events from './pages/Events';
+import Faculty from './pages/Faculty';
+import ELibrary from './pages/ELibrary';
+import Alumni from './pages/Alumni';
+import Gallery from './pages/Gallery';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import GetStarted from './pages/GetStarted';
+
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 
 function App() {
   return (
     <Router>
-      <div className="app-container min-h-screen flex flex-col">
+      <ScrollToTop />
+      <div className="app-container min-h-screen flex flex-col bg-[var(--background)] text-[var(--text-main)] font-sans">
         <Navbar />
         <main className="flex-grow">
           <Routes>
