@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Book, Code, Database, Server } from 'lucide-react';
 
 const programs = [

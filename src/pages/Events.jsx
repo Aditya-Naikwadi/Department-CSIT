@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
 const events = [

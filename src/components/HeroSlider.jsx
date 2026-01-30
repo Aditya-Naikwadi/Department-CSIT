@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 
 // Placeholder images - using Unsplash for "Computer Science Department" vibes
 const images = [
@@ -22,7 +22,7 @@ const HeroSlider = () => {
     return (
         <div className="relative h-screen w-full overflow-hidden">
             <AnimatePresence mode='wait'>
-                <motion.div
+                <Motion.div
                     key={currentIndex}
                     initial={{ opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -37,13 +37,13 @@ const HeroSlider = () => {
                     {/* Overlay Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-r from-[var(--background)] via-transparent to-transparent opacity-90" />
                     <div className="absolute inset-0 bg-black/40" />
-                </motion.div>
+                </Motion.div>
             </AnimatePresence>
 
             {/* Content Overlay */}
             <div className="absolute inset-0 z-10 flex items-center container mx-auto px-4">
                 <div className="max-w-3xl">
-                    <motion.h1
+                    <Motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
@@ -51,18 +51,18 @@ const HeroSlider = () => {
                     >
                         <span className="gradient-text">Excellence</span> in <br />
                         CS & IT Education
-                    </motion.h1>
+                    </Motion.h1>
 
-                    <motion.p
+                    <Motion.p
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.8 }}
                         className="text-lg md:text-2xl text-[var(--text-muted)] mb-8 max-w-2xl"
                     >
                         B.K. Birla College's premier department fostering innovation, research, and future-ready technology professionals.
-                    </motion.p>
+                    </Motion.p>
 
-                    <motion.div
+                    <Motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.1, duration: 0.8 }}
@@ -70,7 +70,7 @@ const HeroSlider = () => {
                     >
                         <button className="btn btn-primary text-lg px-8 py-3">Explore Programs</button>
                         <button className="btn btn-outline text-lg px-8 py-3">View Gallery</button>
-                    </motion.div>
+                    </Motion.div>
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 
 
 const Navbar = () => {
@@ -19,7 +19,10 @@ const Navbar = () => {
 
     // Close mobile menu on route change
     useEffect(() => {
-        setIsOpen(false);
+        if (isOpen) {
+            setIsOpen(false);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location]);
 
     const navLinks = [

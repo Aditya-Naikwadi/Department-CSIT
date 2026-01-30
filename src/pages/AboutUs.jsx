@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
-import { Target, Eye, HISTORY } from 'lucide-react';
+import { motion as Motion } from 'framer-motion';
+import { Target, Eye, History } from 'lucide-react';
 
 const AboutUs = () => {
     return (
         <div className="pt-24 min-h-screen container mx-auto px-4 pb-12">
-            <motion.div
+            <Motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center mb-16"
@@ -13,11 +13,11 @@ const AboutUs = () => {
                 <p className="text-[var(--text-muted)] max-w-2xl mx-auto">
                     Learn about our rich history, mission, and vision for the future.
                 </p>
-            </motion.div>
+            </Motion.div>
 
             {/* Mission & Vision */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-                <motion.div
+                <Motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -32,9 +32,9 @@ const AboutUs = () => {
                     <p className="text-[var(--text-muted)] leading-relaxed">
                         To provide high-quality education in computer science and information technology, fostering a culture of innovation, research, and ethical values, empowering students to become global leaders in the tech industry.
                     </p>
-                </motion.div>
+                </Motion.div>
 
-                <motion.div
+                <Motion.div
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -49,7 +49,7 @@ const AboutUs = () => {
                     <p className="text-[var(--text-muted)] leading-relaxed">
                         To be a center of excellence in computing education, recognized for academic integrity, cutting-edge research, and social responsibility.
                     </p>
-                </motion.div>
+                </Motion.div>
             </div>
 
             {/* History */}
@@ -63,7 +63,7 @@ const AboutUs = () => {
                 </div>
                 <div className="md:w-1/2">
                     <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                        <span className="text-[var(--accent)]"><HISTORY /></span>
+                        <span className="text-[var(--accent)]"><History /></span>
                         Our History
                     </h2>
                     <div className="space-y-6 text-[var(--text-muted)]">

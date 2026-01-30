@@ -1,5 +1,5 @@
 import HeroSlider from '../components/HeroSlider';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { BookOpen, Users, Trophy, Rocket } from 'lucide-react';
 
 const stats = [

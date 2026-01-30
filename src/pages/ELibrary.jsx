@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { BookOpen, FileText, Search, Download } from 'lucide-react';
 
 const resources = [

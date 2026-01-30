@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 
 const GetStarted = () => {
     const [activeTab, setActiveTab] = useState('login');
@@ -11,8 +11,8 @@ const GetStarted = () => {
                     <button
                         onClick={() => setActiveTab('login')}
                         className={`flex-1 py-3 text-sm font-semibold rounded-lg transition-all ${activeTab === 'login'
-                                ? 'bg-[var(--primary)] text-white shadow-lg'
-                                : 'text-[var(--text-muted)] hover:text-white'
+                            ? 'bg-[var(--primary)] text-white shadow-lg'
+                            : 'text-[var(--text-muted)] hover:text-white'
                             }`}
                     >
                         Login
@@ -20,8 +20,8 @@ const GetStarted = () => {
                     <button
                         onClick={() => setActiveTab('register')}
                         className={`flex-1 py-3 text-sm font-semibold rounded-lg transition-all ${activeTab === 'register'
-                                ? 'bg-[var(--secondary)] text-white shadow-lg'
-                                : 'text-[var(--text-muted)] hover:text-white'
+                            ? 'bg-[var(--secondary)] text-white shadow-lg'
+                            : 'text-[var(--text-muted)] hover:text-white'
                             }`}
                     >
                         Register
